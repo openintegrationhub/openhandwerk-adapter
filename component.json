@@ -1,0 +1,33 @@
+{
+  "title": "openHandwerk",
+  "description": "openHandwerk component for the elastic.io platform",
+  "docsUrl": "https://openhandwerk.de",
+  "credentials": {
+    "fields": {
+      "email": {
+        "label": "Your email",
+        "required": true,
+        "viewClass": "TextFieldView",
+        "note": "Use your email registerd in <b>openHandwerk</b>",
+        "placeholder": "youremail@mail.com"
+      },
+      "password": {
+        "label": "Your password",
+        "required": true,
+        "viewClass": "PasswordFieldView",
+        "note": "Use your password for <b>openHandwerk</b>"
+      },
+      "apiUrl": {
+        "label": "openHandwerk API URL",
+        "required": true,
+        "viewClass": "TextFieldView",
+        "note": "Use the openHandwerk API URL",
+        "placeholder": "https://openhandwerk.de/api/v1"
+      }
+    }
+  },
+  "triggers": {
+  },
+  "actions": {
+  }
+}
