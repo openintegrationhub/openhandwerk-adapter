@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "properties": {
+    "properties": {
+      "id": {
+        "type": "string",
+        "required": true,
+        "title": "id",
+        "note": "Customer's id",
+        "placeholder": "199997"
+      },
+      "salutation": {
+        "type": "string",
+        "required": true,
+        "title": "Salutation",
+        "note": "Customer's salutation",
+        "placeholder": "Herr"
+      },
+      "firstname": {
+        "type": "string",
+        "required": true,
+        "title": "First name",
+        "note": "Customer's first name",
+        "placeholder": "Max"
+      },
+      "lastname": {
+        "type": "string",
+        "required": true,
+        "title": "Last name",
+        "note": "Customer's last name",
+        "placeholder": "Mustermann"
+      },
+      "company": {
+        "type": "string",
+        "required": true,
+        "title": "Company",
+        "note": "Customer's company",
+        "placeholder": "Mustermann GmbH"
+      },
+      "street": {
+        "type": "string",
+        "required": true,
+        "title": "Street",
+        "note": "Customer's address street",
+        "placeholder": "Main Str. 120"
+      },
+      "street_nr": {
+        "type": "string",
+        "required": true,
+        "title": "Street number",
+        "note": "Customer's address street number",
+        "placeholder": "7"
+      },
+      "zip": {
+        "type": "string",
+        "required": true,
+        "title": "Zip code",
+        "note": "Customer's address zip code",
+        "placeholder": "28507"
+      },
+      "city": {
+        "type": "string",
+        "required": true,
+        "title": "City",
+        "note": "Customer's city",
+        "placeholder": "Berlin"
+      },
+      "country": {
+        "type": "string",
+        "required": true,
+        "title": "Country",
+        "note": "Customer's country",
+        "placeholder": "Germany"
+      },
+      "mobile_phone": {
+        "type": "string",
+        "required": true,
+        "title": "Mobile phone",
+        "note": "Customer's mobile phone",
+        "placeholder": "017631046821"
+      },
+      "phone": {
+        "type": "string",
+        "required": true,
+        "title": "Phone",
+        "note": "Customer's phone",
+        "placeholder": "0307130170"
+      },
+      "fax": {
+        "type": "string",
+        "required": true,
+        "title": "Fax",
+        "note": "Customer's fax",
+        "placeholder": "0307130199"
+      },
+      "email": {
+        "type": "string",
+        "required": true,
+        "title": "Email",
+        "note": "Customer's email",
+        "placeholder": "max@mustermann.com"
+      },
+      "website": {
+        "type": "string",
+        "required": true,
+        "title": "Website",
+        "note": "Customer's website",
+        "placeholder": "www.mustermann.com"
+      },
+    }
+  }
+}
