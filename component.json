@@ -27,6 +27,15 @@
     }
   },
   "triggers": {
+    getCustomersPolling: {
+        main: './lib/triggers/getCustomersPolling.js',
+        title: 'Get Customers Polling',
+        description: 'Get Customers from OpenHandwerk',
+        type: 'polling',
+        metadata: {
+          out: './lib/schemas/getCustomers.out.json'
+        }
+      },
   },
   "actions": {
   }
