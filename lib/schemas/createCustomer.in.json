@@ -1,0 +1,107 @@
+{
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "title": "email",
+      "description": "Email of the customer",
+      "required": true
+    },
+    "contact_type": {
+      "type": "string",
+      "title": "contact type",
+      "description": "Contact type: Person / Firma",
+      "required": true
+    },
+    "company": {
+      "type": "string",
+      "title": "company",
+      "description": "Company of the customer",
+      "required": false
+    },
+    "branch": {
+      "type": "string",
+      "title": "branch",
+      "description": "Branch of the customer",
+      "required": false
+    },
+    "salutation": {
+      "type": "string",
+      "title": "salutation",
+      "description": "Salutation: Herr / Frau",
+      "required": true
+    },
+    "firstname": {
+      "type": "string",
+      "title": "firstname",
+      "description": "First name of customer",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "title": "lastname",
+      "description": "Last name of customer",
+      "required": true
+    },
+    "contact_person": {
+      "type": "string",
+      "title": "contact person",
+      "description": "Contact person of customer",
+      "required": false
+    },
+    "street": {
+      "type": "string",
+      "title": "street",
+      "description": "Street of customer",
+      "required": true
+    },
+    "street_nr": {
+      "type": "number",
+      "title": "street_nr",
+      "description": "Street number of customer",
+      "required": true
+    },
+    "zip": {
+      "type": "number",
+      "title": "zip",
+      "description": "Zip code of customer",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "title": "city",
+      "description": "City of customer",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "title": "country",
+      "description": "Country of customer",
+      "required": true
+    },
+    "additional_address": {
+      "type": "string",
+      "title": "additional_address",
+      "description": "Additional address",
+      "required": false
+    },
+    "phone": {
+      "type": "string",
+      "title": "phone",
+      "description": "Phone number of the customer",
+      "required": false
+    },
+    "mobile_phone": {
+      "type": "string",
+      "title": "mobile_phone",
+      "description": "Mobile phone number of the customer",
+      "required": false
+    },
+    "fax": {
+      "type": "string",
+      "title": "fax",
+      "description": "Fax number of the customer",
+      "required": false
+    }
+  }
+}
