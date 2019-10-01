@@ -22,7 +22,7 @@
         "required": true,
         "viewClass": "TextFieldView",
         "note": "Use the openHandwerk API URL",
-        "placeholder": "https://openhandwerk.de/api/v1"
+        "placeholder": "https://api1.openhandwerk.de/api/v1"
       }
     }
   },
@@ -38,5 +38,14 @@
       },
   },
   "actions": {
+    "createCustomer": {
+        "main": "./lib/actions/createCustomer.js",
+        "title": "New customer",
+        "description": "Create new customer for openhandwerk account",
+        "metadata": {
+          "in": "./lib/schemas/createCustomer.in.json",
+          "out": "./lib/schemas/createCustomer.out.json"
+        }
+      },
   }
 }
