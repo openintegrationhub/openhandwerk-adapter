@@ -3,6 +3,8 @@
 const request = require('request-promise');
 
 async function getToken(config) {
+  console.log("getting token..");
+
   const getTokenOptions = {
     uri: config.apiBaseUrl + `/login`,
     body: {
@@ -13,10 +15,13 @@ async function getToken(config) {
 
   try {
     const tokenRequest = await request.post(getTokenOptions);
+    console.log("request token..");
     const tokenObject = JSON.parse(tokenRequest);
     const token = tokenObject.access_token;
+    console.log("token retrieved: ", token);
     return token;
   } catch (e) {
+    console.log("error catched..");
     console.log(`ERROR: ${e}`);
     throw new Error(e);
   }
@@ -34,8 +39,10 @@ async function verifyCredentials(credentials, cb) {
 
     const token = getToken(cfg);
 
+    console.log("token got: - ", token);
+
     return token.then(function(token) {
-      console.log("[PROMISE ANSWER - TOKEN]", token)
+      console.log("[PROMISE ANSWER - TOKEN]", token);
       if (token !== false) {
         cb(null, { verified: true });
         console.log('Credentials verified successfully');
@@ -49,6 +56,7 @@ async function verifyCredentials(credentials, cb) {
       cb(null, { verified: false });
     });
   } catch (e) {
+    console.log("Error again");
     console.log(`${e}`);
     throw new Error(e);
   }
