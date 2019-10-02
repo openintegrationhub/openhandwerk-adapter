@@ -13,12 +13,13 @@ async function getToken(config) {
     }
   };
 
-  const tokenRequest = await request.post(getTokenOptions);
+  //const tokenRequest = await request.post(getTokenOptions);
   console.log("request token..");
-  const tokenObject = JSON.parse(tokenRequest);
-  const token = tokenObject.access_token;
-  console.log("token retrieved: ", token);
-  return token;
+  return request.post(getTokenOptions);
+  //const tokenObject = JSON.parse(tokenRequest);
+  //const token = tokenObject.access_token;
+  //console.log("token retrieved: ", token);
+  //return token;
 }
 
 async function verifyCredentials(credentials, cb) {
