@@ -3,6 +3,8 @@
 const request = require('request-promise');
 
 async function getToken(config) {
+  console.log(config.apiBaseUrl + `/login`);
+
   const options = {
     uri: config.apiBaseUrl + `/login`,
     json: true,
@@ -14,17 +16,20 @@ async function getToken(config) {
 
   try {
     const tokenRequest = await request.post(options);
+    console.log("[REQ]", tokenRequest);
     const { token } = tokenRequest;
     return token;
   } catch (err) {
     // console.log(`ERROR: ${err}`);
-    // throw new Error(err);
+    console.log("Fucking error");
+    throw new Error(err);
     return err;
   }
 }
 
 async function verifyCredentials(credentials, cb) {
-  console.log('Credentials passed for verification %j', credentials)
+  // console.log('Credentials passed for verification %j', credentials)
+  console.log("Request validation..");
 
   try {
     const cfg = {
