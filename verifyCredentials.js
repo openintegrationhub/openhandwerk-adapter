@@ -28,12 +28,13 @@ async function verifyCredentials(credentials, cb) {
   try {
     const cfg = {
       email: credentials.email,
-      password: credentials.password
+      password: credentials.password,
+      apiBaseUrl: credentials.apiBaseUrl
     };
 
     const token = getToken(cfg);
 
-    console.log(token);
+    console.log("token: ", token);
 
     if (token !== false) {
       cb(null, { verified: true });
