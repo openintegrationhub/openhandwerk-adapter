@@ -35,7 +35,7 @@
         "metadata": {
           "out": "./lib/schemas/getCustomers.out.json"
         }
-      },
+      }
   },
   "actions": {
     "createCustomer": {
@@ -46,6 +46,6 @@
           "in": "./lib/schemas/createCustomer.in.json",
           "out": "./lib/schemas/createCustomer.out.json"
         }
-      },
+      }
   }
 }
