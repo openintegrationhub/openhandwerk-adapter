@@ -14,8 +14,10 @@ async function getToken(config) {
 
   try {
     const tokenRequest = await request.post(options);
-    console.log("[REQ]", JSON.parse(tokenRequest), tokenRequest);
+    console.log("[REQ]");
+    console.log(tokenRequest);
     const { token } = tokenRequest;
+    console.log(token);
     return token;
   } catch (err) {
     // console.log(`ERROR: ${err}`);
