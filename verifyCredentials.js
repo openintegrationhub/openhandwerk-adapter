@@ -4,7 +4,7 @@ const request = require('request-promise');
 
 async function getToken(config) {
   const getTokenOptions = {
-    uri: `${config.apiBaseUrl}/login`,
+    uri: config.apiBaseUrl + `/login`,
     headers: {
       'email': config.email,
       'password': config.password
@@ -32,6 +32,8 @@ async function verifyCredentials(credentials, cb) {
     };
 
     const token = getToken(cfg);
+
+    console.log(token);
 
     if (token !== false) {
       cb(null, { verified: true });
