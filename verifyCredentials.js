@@ -16,9 +16,9 @@ async function getToken(config) {
     const tokenRequest = await request.post(options);
     console.log("[REQ]");
     console.log(tokenRequest);
-    const { token } = tokenRequest;
-    console.log(token);
-    return token;
+    const { success } = tokenRequest;
+    console.log(success);
+    return success;
   } catch (err) {
     // console.log(`ERROR: ${err}`);
     throw new Error(err);
