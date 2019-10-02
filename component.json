@@ -22,7 +22,14 @@
         "required": true,
         "viewClass": "TextFieldView",
         "note": "Use the openHandwerk API URL",
-        "placeholder": "https://api1.openhandwerk.de/api/v1"
+        "placeholder": "https://api1.openhandwerk.de/v1"
+      },
+      "apiKey": {
+        "label": "openHandwerk API Key",
+        "required": true,
+        "viewClass": "TextFieldView",
+        "note": "Use the openHandwerk API Key got by /login",
+        "placeholder": "Bearer token"
       }
     }
   },
