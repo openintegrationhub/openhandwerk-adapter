@@ -5,7 +5,7 @@ const request = require('request-promise');
 async function getToken(config) {
   const getTokenOptions = {
     uri: config.apiBaseUrl + `/login`,
-    headers: {
+    body: {
       'email': config.email,
       'password': config.password
     }
