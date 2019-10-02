@@ -3,15 +3,24 @@
 const request = require('request-promise');
 
 async function getToken(config) {
-  const getTokenOptions = {
+  const options = {
     uri: config.apiBaseUrl + `/login`,
+    json: true,
     body: {
-      'email': config.email,
-      'password': config.password
-    }
+      email: config.email,
+      password: config.password,
+    },
   };
 
-  return request.post(getTokenOptions);
+  try {
+    const tokenRequest = await request.post(options);
+    const { token } = tokenRequest;
+    return token;
+  } catch (err) {
+    // console.log(`ERROR: ${err}`);
+    // throw new Error(err);
+    return err;
+  }
 }
 
 async function verifyCredentials(credentials, cb) {
@@ -24,9 +33,19 @@ async function verifyCredentials(credentials, cb) {
       apiBaseUrl: credentials.apiBaseUrl
     };
 
-    return getToken(cfg);
+    const token = await getToken(cfg);
+    console.log("TOKEN: -> ", token);
+
+    if (token) {
+      cb(null, { verified: true });
+      console.log('Credentials verified successfully');
+      return true;
+    }
+
+    throw new Error('Error in validating credentials!');
+    return false;
+
   } catch (e) {
-    console.log("Error again");
     console.log(`${e}`);
     throw new Error(e);
   }
