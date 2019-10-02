@@ -34,18 +34,17 @@ async function verifyCredentials(credentials, cb) {
 
     const token = getToken(cfg);
 
-    console.log("token: ", token);
-
-    if (token !== false) {
-      cb(null, { verified: true });
-      console.log('Credentials verified successfully');
-      credentials.apiKey = token;
-      return true;
-    }
-
-    throw new Error('Error in validating credentials!');
-
-    return false;
+    return token.then(function(token) {
+      console.log("[PROMISE ANSWER - TOKEN]", token)
+      if (token !== false) {
+        cb(null, { verified: true });
+        console.log('Credentials verified successfully');
+        credentials.apiKey = token;
+        return true;
+      } else {
+        throw new Error('Error in validating credentials!');
+      }
+    });
   } catch (e) {
     console.log(`${e}`);
     throw new Error(e);
