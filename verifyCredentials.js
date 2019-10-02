@@ -36,20 +36,24 @@ async function verifyCredentials(credentials, cb) {
 
     console.log("token got: - ", token);
 
-    return token.then(function(token) {
-      console.log("[PROMISE ANSWER - TOKEN]", token);
-      if (token !== false) {
-        cb(null, { verified: true });
-        console.log('Credentials verified successfully');
-        credentials.apiKey = token;
-        return true;
-      } else {
-        throw new Error('Error in validating credentials!');
-      }
-    }, function() {
-      console.log("credentials invalid")
-      cb(null, { verified: false });
-    });
+    return token
+      .then(function(token) {
+        console.log("[PROMISE ANSWER - TOKEN]", token);
+        if (token !== false) {
+          cb(null, { verified: true });
+          console.log('Credentials verified successfully');
+          credentials.apiKey = token;
+          return true;
+        } else {
+          throw new Error('Error in validating credentials!');
+        }
+      })
+      .catch(function() {
+        console.log("credentials invalid")
+        cb(null, { verified: false });
+      });
+
+
   } catch (e) {
     console.log("Error again");
     console.log(`${e}`);
