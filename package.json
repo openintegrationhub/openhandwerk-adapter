@@ -17,11 +17,12 @@
     "url": "https://github.com/openintegrationhub/openhandwerk-adapter/issues"
   },
   "homepage": "https://github.com/openintegrationhub/openhandwerk-adapter#readme",
-  "engines" : {
-    "node" : "10.14.1"
+  "engines": {
+    "node": "10.14.1"
   },
   "dependencies": {
+    "elasticio-node": "^0.0.8",
     "elasticio-sailor-nodejs": "^2.2.0",
-    "elasticio-node": "^0.0.8"
+    "request-promise": "^4.2.4"
   }
 }
