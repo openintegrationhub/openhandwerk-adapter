@@ -44,6 +44,9 @@ async function verifyCredentials(credentials, cb) {
       } else {
         throw new Error('Error in validating credentials!');
       }
+    }, function() {
+      console.log("credentials invalid")
+      cb(null, { verified: false });
     });
   } catch (e) {
     console.log(`${e}`);
