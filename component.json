@@ -17,7 +17,7 @@
         "viewClass": "PasswordFieldView",
         "note": "Use your password for <b>openHandwerk</b>"
       },
-      "apiUrl": {
+      "apiBaseUrl": {
         "label": "openHandwerk API URL",
         "required": true,
         "viewClass": "TextFieldView",
