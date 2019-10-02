@@ -13,18 +13,12 @@ async function getToken(config) {
     }
   };
 
-  try {
-    const tokenRequest = await request.post(getTokenOptions);
-    console.log("request token..");
-    const tokenObject = JSON.parse(tokenRequest);
-    const token = tokenObject.access_token;
-    console.log("token retrieved: ", token);
-    return token;
-  } catch (e) {
-    console.log("error catched..");
-    console.log(`ERROR: ${e}`);
-    throw new Error(e);
-  }
+  const tokenRequest = await request.post(getTokenOptions);
+  console.log("request token..");
+  const tokenObject = JSON.parse(tokenRequest);
+  const token = tokenObject.access_token;
+  console.log("token retrieved: ", token);
+  return token;
 }
 
 async function verifyCredentials(credentials, cb) {
