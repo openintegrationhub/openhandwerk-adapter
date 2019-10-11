@@ -2,10 +2,10 @@
   "type": "object",
   "properties": {
     "properties": {
-      "rowid": {
+      "id": {
         "type": "string",
         "required": true,
-        "title": "rowid",
+        "title": "id",
         "note": "Customer's id",
         "placeholder": "199997"
       },
