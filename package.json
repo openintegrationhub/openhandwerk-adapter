@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "elasticio-node": "^0.0.8",
-    "elasticio-sailor-nodejs": "^2.2.0",
+    "elasticio-sailor-nodejs": "2.2.1",
     "request-promise": "^4.2.4"
   }
 }
