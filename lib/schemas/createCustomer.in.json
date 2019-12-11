@@ -13,12 +13,6 @@
       "description": "Contact type: Person / Firma",
       "required": true
     },
-    "company": {
-      "type": "string",
-      "title": "company",
-      "description": "Company of the customer",
-      "required": false
-    },
     "branch": {
       "type": "string",
       "title": "branch",

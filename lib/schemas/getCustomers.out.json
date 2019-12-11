@@ -30,13 +30,6 @@
         "note": "Customer's last name",
         "placeholder": "Mustermann"
       },
-      "company": {
-        "type": "string",
-        "required": true,
-        "title": "Company",
-        "note": "Customer's company",
-        "placeholder": "Mustermann GmbH"
-      },
       "street": {
         "type": "string",
         "required": true,
