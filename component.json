@@ -30,6 +30,13 @@
         "viewClass": "TextFieldView",
         "note": "Use the openHandwerk API Key got by /login",
         "placeholder": "Bearer token"
+      },
+      "applicationUid": {
+        "label": "Application uid",
+        "required": false,
+        "viewClass": "TextFieldView",
+        "note": "Application uid",
+        "placeholder": "application123456"
       }
     }
   },
