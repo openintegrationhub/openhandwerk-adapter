@@ -18,7 +18,7 @@ The **adapter** supports the following **actions** and **triggers**:
 #### Triggers:
   - Get customers - polling (```getCustomersPolling.js```)
 
-  All triggers are of type '*polling'* which means that the **trigger** will be scheduled to execute periodically. It will fetch only these objects from the database that have been modified or created since the previous execution. Then it will emit one message per object that changes or is added since the last polling interval. For this case at the very beginning we just create an empty `snapshot` object. Later on we attach ``lastUpdated`` to it. At the end the entire object should be emitted as the message body.
+  All triggers are of type '*polling'* which means that the **trigger** will be scheduled to execute periodically. 
 
 #### Actions:
   - Create customer (```createCustomer.js```)
